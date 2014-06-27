@@ -1,0 +1,68 @@
+﻿<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Book Store Template, Free CSS Template, CSS Website Layout, CSS, HTML" />
+    <meta name="description" content="Book Store Template, Free CSS Template, Download CSS Website" />
+    <link href="~/Content/templatemo_style.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/style3.css" rel="stylesheet" />
+    <link href="~/Content/style2.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/animate-custom.css" rel="stylesheet" />
+    <link href="~/Content/demo.css" rel="stylesheet" />
+    <link href="~/bootstrap.css" rel="stylesheet" />
+    <script src="~/bootstrap.js"></script>
+    <style>
+        body {
+                background-color:gray;  
+             }
+    </style>
+</head>
+<body>
+
+    <div id="templatemo_container">
+	<div id="templatemo_menu">
+    	<ul>
+            <li><a href="/Home/index">Home</a></li>           
+            <li><a href="/Home/Contact" >Contact</a></li>  
+            <li><a href="/Home/index2">Login</a></li> 
+            <li><a href="/Home/index2">Signup</a></li>
+            <li><a href="/Home/index2">Upload</a></li>
+            <li><a href="/Home/logout">Logout</a></li>
+            <li><a href="#">Cart</a></li>
+            <div class="form-group ">
+                <input type="text" placeholder="Search" class="form-controller " />
+                <a href="/Home/index"><button type="button" >Search</button></a>
+            </div>
+            <li><a href="/Home/checkout">Checkout</a></li>
+            
+    	</ul>
+    </div> <!-- end of menu -->
+        @*@RenderBody()*@
+    
+    <div id="templatemo_header">
+        <img src="~/images/templatemo_header_bg.jpg" style="width:940px; height:280px" />
+    </div> <!-- end of header -->
+    
+   
+        @RenderBody()
+
+        
+    <div id="templatemo_footer">
+    
+	       <a href="~/Views/Home/subpage.cshtml">Home</a> | <a href="~/Views/Home/subpage.cshtml">Search</a> | <a href="subpage.html">Books</a> | <a href="#">New Releases</a> | <a href="#">FAQs</a> | <a href="#">Contact Us</a><br />
+        Copyright © 2048 <a href="#"><strong>Your Company Name</strong></a> | <a href="http://www.iwebsitetemplate.com" target="_parent">Website Templates</a> by <a href="http://www.templatemo.com" target="_parent" title="free css templates">Free CSS Templates</a>	</div> 
+    <!-- end of footer -->
+<!--  Free CSS Template www.templatemo.com -->
+</div> <!-- end of container -->
+<div align=center>This template  downloaded form <a href='http://all-free-download.com/free-website-templates/'>free website templates</a></div>
+
+     
+  
+</body>
+</html>

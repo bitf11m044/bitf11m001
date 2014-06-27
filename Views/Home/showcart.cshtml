@@ -1,0 +1,44 @@
+﻿@{
+    
+}
+@{
+    ViewBag.Title = "showcart";
+}
+
+
+<h2>showcart</h2>
+<body>
+    <style>
+    h4 {
+        color:white;
+        text-align:center;
+        padding-left:20em;
+      }
+    h3 {
+        color:white;
+        text-align:center;
+        }
+</style>
+    @model IEnumerable<Proj.Models.Book>
+        <table>
+            <tr>
+                <td><h4>Name</h4></td>
+                <td><h4>Price</h4></td>
+                <td></td>
+            </tr>
+    
+        
+    @foreach(var v in Model)
+    {
+        <tr>
+        <td><h4>@v.Name</h4></td>
+        <td><h4>@v.Price</h4></td>
+        <td><a href="/Home/remove?id=@v.Bid">Remove</a></td>
+            </tr>
+    }
+    
+
+
+            </table>
+    <h4> @ViewBag.bill</h4>
+    </body>

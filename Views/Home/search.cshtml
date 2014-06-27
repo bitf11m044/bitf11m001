@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "search";
+}
+
+<h2>search</h2>
+
+<body>
+    @model IEnumerable<Proj.Models.Book>
+    <style>
+        h4 {
+        color:white;
+        text-align:center;
+        padding-left:20em;
+      }
+    </style>
+    @foreach (var v in Model)
+    {
+        <h4>@v.Name</h4>
+        <h4>@v.Price</h4>
+        <h4><a href="/Home/Buy?id=@v.Bid">Buy Now</a></h4>
+        <h4><a href="/Home/Detail?id=@v.Bid">Detail</a></h4>
+    }
+
+    </body>

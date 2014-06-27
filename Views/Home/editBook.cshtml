@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 lt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 lt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 lt8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="UTF-8" />
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
+        <title>Login and Registration Form with HTML5 and CSS3</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Login and Registration Form with HTML5 and CSS3" />
+        <meta name="keywords" content="html5, css3, form, switch, animation, :target, pseudo-class" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="~/Content/demo.css" />
+        <link rel="stylesheet" type="text/css" href="~/Content/style2.css" />
+		<link rel="stylesheet" type="text/css" href="~/Content/animate-custom.css" />
+
+
+        
+    </head>
+    <body>
+        @model Proj.Models.Book
+        <div class="container">
+            <!-- Codrops top bar -->
+            <div class="codrops-top">
+                <a href="#">
+                    <strong>&laquo; Hi: </strong>Thanks for using our site
+                </a>
+                <span class="right">
+                    <a href="#">
+                        <strong>Welcome!Please Enter data</strong>
+                    </a>
+                </span>
+                <div class="clr"></div>
+            </div><!--/ Codrops top bar -->
+          <header>
+                <h2>Upload Product <span></span></h2>
+            </header>
+         @*   <br /><br />*@
+            <section>				
+                <div id="container_demo" >
+                    <!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
+                    <a class="hiddenanchor" id="toregister"></a>
+                    <a class="hiddenanchor" id="tologin"></a>
+                    <div id="wrapper">
+                        <div id="login" class="animate form">
+                            <form  action="/Home/Restore/@Model.Bid" autocomplete="on" method="post" enctype="multipart/form-data" > 
+                                @*<h1>Log in</h1> *@
+                                <p> 
+                                    <label for="username" class="uname" data-icon="u" >Name </label>
+                                    <input id="Name" name="Name" required="required" type="text" value=@Model.Name placeholder="myusername or mymail@mail.com"/>
+                                </p>
+                                <p> 
+                                    <label for="password" class="youpasswd" data-icon="p">Edition </label>
+                                    <input id="Edition" name="Edition" required="required" type="text" value=@Model.Edition placeholder="eg. X8df!90EO" /> 
+                                </p>
+                                <p> 
+                                    <label for="password" class="youpasswd" data-icon="p">Description </label>
+                                    <input id="Description" name="Description" required="required" type="text" value=@Model.Description placeholder="eg. X8df!90EO" /> 
+                                </p>
+                                <p> 
+                                    <label for="password" class="youpasswd" data-icon="p">Author </label>
+                                    <input id="Author" name="Author" required="required" type="text" value=@Model.Authors placeholder="eg. X8df!90EO" /> 
+                                </p>
+                                <p> 
+                                    <label for="password" class="youpasswd" data-icon="p">ISBN </label>
+                                    <input id="ISBN" name="ISBN" required="required" type="text" value=@Model.ISBN placeholder="eg. X8df!90EO" /> 
+                                </p>
+                                <p> 
+                                    <label for="password" class="youpasswd" data-icon="p">Price </label>
+                                    <input id="Price" name="Price" required="required" type="text" value=@Model.Price placeholder="eg. X8df!90EO" /> 
+                                </p>
+                                <p> 
+                                    <label for="password" class="youpasswd" data-icon="p">Publisher </label>
+                                    <input id="Publisher" name="Publisher" required="required" type="text" value=@Model.Publisher placeholder="eg. X8df!90EO" /> 
+                                </p>
+                                  
+
+                                <p> 
+                                    <label for="password" class="youpasswd" data-icon="p">Category </label>
+                                    <select id="Category" name="Category">
+                                        <option value="1">Mathematics</option>
+                                        <option value="2">English</option>
+                                        <option value="3">OOP</option>
+                                        <option value="4">DSA</option>
+                                        <option value="5">C++</option>
+                                        <option value="6">.NET</option>
+                                        <option value="7">Java</option>
+                                        <option value="8">Android</option>
+                                        <option value="9">CN</option>
+                                        </select>
+                                    <p>
+                                    Upload Image: <input type="file"  name="image"  />
+                                        </p>
+                                </p>
+                                <p class="login button"> 
+                                    <input type="submit" value="Save" /> 
+								</p>
+                                </form>
+                        </div>
+                        </div>
+						
+                    </div> 
+            </section>
+        </div>
+        <br /><br /><br /><br />
+    </body>
+</html>
